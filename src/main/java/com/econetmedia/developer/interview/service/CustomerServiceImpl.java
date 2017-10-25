@@ -5,6 +5,7 @@ import com.econetmedia.developer.interview.model.Customer;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Created by jmuzinda on 10/25/17.
@@ -31,6 +32,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> filterByGradeOrSalary(String grade, Number salary, List<Customer> customerInputList) {
-        return null;
+        return customerInputList.stream()
+                .filter((Customer c) -> c.getGrade().equals(grade))
+                .filter((Customer c) -> c.getSalary().equals(salary))
+                .collect(Collectors.toList());
     }
 }
