@@ -19,8 +19,7 @@ public class CustomerInitialiser {
             if(i<6){
                 customer.setGrade("g1");
                 customer.setSalary(i<2?10:11);
-            }
-            if(i>6&&i<11){
+            } else if(i>6&&i<11) {
                 customer.setGrade("g2");
                 customer.setSalary(i<9?13:15);
             }else {
