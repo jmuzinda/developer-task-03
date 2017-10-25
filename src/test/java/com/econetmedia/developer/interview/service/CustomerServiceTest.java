@@ -41,8 +41,8 @@ public class CustomerServiceTest {
 
     @Test
     public void shouldReturnCorrectFilterListForGivenGrade(){
-        List<Customer> customerList= customerService.filterByGradeOrSalary("g2",19,CustomerInitialiser.getDummycustomerList());
-        assertThat(customerList.size(),is(6));
+        List<Customer> customerList= customerService.filterByGradeOrSalary("g3",19,CustomerInitialiser.getDummycustomerList());
+        assertThat(customerList.size(),is(2));
     }
 
 
